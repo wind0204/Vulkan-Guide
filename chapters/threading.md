@@ -2,7 +2,7 @@
 
 One of the big differences between Vulkan and OpenGL is that Vulkan is not limited to a single-threaded state machine system. Before running off to implement threads in an application, it is important to understand how threading works in Vulkan.
 
-The Vulkan Spec [Threading Behavior section](https://www.khronos.org/registry/vulkan/specs/1.1/html/vkspec.html#fundamentals-threadingbehavior) explains in detail how applications are in charge of managing all _externally synchronized_ elements of Vulkan. It is important to realize that multithreading in Vulkan only provides host-side scaling, as anything interacting with the device still needs to be [synchronized correctly](./sychronization.md)
+The Vulkan Spec [Threading Behavior section](https://www.khronos.org/registry/vulkan/specs/1.1/html/vkspec.html#fundamentals-threadingbehavior) explains in detail how applications are in charge of managing all _externally synchronized_ elements of Vulkan. It is important to realize that multithreading in Vulkan only provides host-side scaling, as anything interacting with the device still needs to be [synchronized correctly](./synchronization.md)
 
 Vulkan implementations are not supposed to be introducing any multi-threading, so if an app wants multi-CPU performance, the app is in charge of managing the threading.
 
